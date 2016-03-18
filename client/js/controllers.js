@@ -13,7 +13,7 @@ controllers.controller('homeController', ['$scope', '$location','Entry', '$route
     
 }]);
 
-controllers.controller('newPostController', ['$scope', '$rootScope', 'Entry', function($scope, $rootScope, Entry){
+controllers.controller('newPostController', ['$scope', '$rootScope', 'Entry', '$location', function($scope, $rootScope, Entry, $location){
     $scope.message = 'CREATE NEW POST';
     $scope.newPost = {
         title: '',
@@ -27,11 +27,10 @@ controllers.controller('newPostController', ['$scope', '$rootScope', 'Entry', fu
         $scope.entry.data = $scope.newPost;
         Entry.save($scope.entry, function(){
         console.log($scope.entry.data);
-        console.log($scope.entry.data.title);    
+        console.log($scope.entry.data.title);
+        $location.path('/')    
         })}
-        // $('#title').val('');
-        // $('#author').val('');
-        // $('#content').val('');
+
     
 }]);
 
