@@ -16,6 +16,10 @@ app.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/postviewer.html',
         controller: 'postViewerController'
     })
+    .when('/edit/:id', {
+        templateUrl: 'views/edit.html',
+        controller: 'editController'
+    })
     .otherwise({
         redirectTo: '/'
     });

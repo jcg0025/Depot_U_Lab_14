@@ -3,7 +3,10 @@
 var app = angular.module('myBlogApp.factories', ['ngResource']);
 
 app.factory('Entry', ['$resource', function($resource){
-    return $resource('/api/posts/:id');    
+    return $resource('/api/posts/:id', null,
+        {
+            'update': {method: 'PUT'}  
+        });          
 }]);
 
 

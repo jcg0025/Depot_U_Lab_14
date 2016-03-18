@@ -83,9 +83,9 @@ function update(req, res, next) {
             for (var i = 0; i < posts.length; i++) {
                 var post = posts[i];
                 if (post.id === id) {
-                    post.title = newPost.title;
-                    post.author = newPost.author;
-                    post.content = newPost.content;
+                    posts[i].title = newPost.title;
+                    posts[i].author = newPost.author;
+                    posts[i].content = newPost.content;
                     found = true;
                     break;
                 }

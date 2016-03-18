@@ -28,3 +28,19 @@ controllers.controller('newPostController', ['$scope', 'Entry', '$location', fun
 controllers.controller('postViewerController', ['$scope', '$routeParams', 'Entry', function($scope, $routeParams, Entry){
     $scope.post = Entry.get({id:$routeParams.id});
 }]);
+
+controllers.controller('editController', ['$scope', '$routeParams', 'Entry', function($scope, $routeParams, Entry){
+    $scope.post = Entry.get({id:$routeParams.id});
+    
+        $scope.edit = {
+            title: '',
+            author: '',
+            content: ''
+        }
+        
+        $scope.update = function() {
+            $scope.post.data = $scope.edit;
+            Entry.update({id: $routeParams.id}, $scope.post.data);
+        }
+        
+}]);

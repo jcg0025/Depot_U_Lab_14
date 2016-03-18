@@ -1,0 +1,25 @@
+<h2>EDITOR</h2>
+<div>
+    <h3>Current:</h3>
+    {{post.data.title}}
+    {{post.data.author}}
+    {{post.data.content}}
+    <br>
+    <h3>New:</h3>
+    <label for="title">TITLE</label>
+    <br>
+    <input id='title' type="text" ng-model='edit.title'>
+    <br>
+    <br>
+    <label for="author">AUTHOR</label>
+    <br>
+    <input id='author' type="text" ng-model='edit.author'>
+    <br>
+    <br>
+    <label for="content">CONTENT</label>
+    <br>
+    <input id='content' type="text" ng-model='edit.content'>
+    <br>
+    <br>
+    <button ng-click='update()'>Update</button>
+</div>
