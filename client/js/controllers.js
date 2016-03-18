@@ -2,13 +2,15 @@
 
 var controllers = angular.module('myBlogApp.controllers', []);
 
-controllers.controller('homeController', ['$scope', '$location','Entry', function($scope, $location, Entry){
+controllers.controller('homeController', ['$scope', '$location','Entry', '$routeParams', function($scope, $location, Entry, $routeParams){
     $scope.homeMessage = 'HOMEPAGE';
     $scope.go = function(){
         $location.path('/newpost')
     }
-    var allPosts = Entry.query();
-    console.log(allPosts);
+    
+    $scope.allPosts = Entry.query();
+    console.log($scope.allPosts);
+    
 }]);
 
 controllers.controller('newPostController', ['$scope', '$rootScope', 'Entry', function($scope, $rootScope, Entry){
@@ -33,3 +35,8 @@ controllers.controller('newPostController', ['$scope', '$rootScope', 'Entry', fu
     
 }]);
 
+controllers.controller('postViewerController', ['$scope', '$routeParams', 'Entry', function($scope, $routeParams, Entry){
+    $scope.post = Entry.get({id:$routeParams.id});
+    console.log($scope.post);
+   
+}]);

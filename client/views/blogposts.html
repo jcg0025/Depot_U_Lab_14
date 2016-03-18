@@ -1,2 +1,12 @@
 <h1>{{homeMessage}}</h1>
 <button ng-click='go()'>Create New Post</button>
+<div ng-repeat='post in allPosts'>
+    <div>
+        {{post.data.title}}
+        {{post.data.author}}
+        {{post.data.content}}
+        {{post.createdAt}}
+        <a href="#postviewer/{{post.id}}">Read More</a>
+    </div>
+</div>
+

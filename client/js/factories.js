@@ -3,8 +3,10 @@
 var app = angular.module('myBlogApp.factories', ['ngResource']);
 
 app.factory('Entry', ['$resource', function($resource){
-    return $resource('/api/posts');    
+    return $resource('/api/posts/:id');    
 }]);
+
+
 
 
 
