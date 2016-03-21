@@ -1,8 +1,11 @@
 <h2>herro</h2>
-<div>
+<div class='postView'>
     {{post.data.title}}
+    <br>
     {{post.data.author}}
-    {{post.createdAt}}
+    <br>
+    {{post.createdAt | date: 'medium'}}
+    <br>
     {{post.data.content}}
     <br>
     <a href="#edit/{{post.id}}">EDIT</a>    

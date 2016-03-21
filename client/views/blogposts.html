@@ -1,11 +1,23 @@
 <h1>{{homeMessage}}</h1>
-<button ng-click='go()'>Create New Post</button>
+<button style='margin-left: 10px'ng-click='go()'>Create New Post</button>
+<br>
+<br>
 <div ng-repeat='post in allPosts | orderBy:"-createdAt"'>
-    <div>
-        {{post.data.title}}
+    <div class='container'>
+    <div class='col-md-8 col-md-offset-2'>
+    <div class='entryContainer'>
+        <div class='entry'>
+        <strong style='text-decoration: underline'>{{post.data.title}}</strong>
+        <br>
         {{post.data.author}}
-        {{post.createdAt}}
+        <br>
+        {{post.createdAt | date: 'medium'}}
+        <br>
         <a href="#postviewer/{{post.id}}">Read More</a>
+        </div>
+    </div>
+    </div>
+        
     </div>
 </div>
 
