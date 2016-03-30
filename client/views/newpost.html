@@ -1,19 +1,23 @@
-<h1>{{message}}</h1>
-<div class='newPost'>
-<label for="title">TITLE</label>
-<br>
-<input id='title' type="text" ng-model='newPost.title'>
-<br>
-<br>
-<label for="author">AUTHOR</label>
-<br>
-<input id='author' type="text" ng-model='newPost.author'>
-<br>
-<br>
-<label for="content">CONTENT</label>
-<br>
-<textarea  cols="30" rows="10" id='content' type="text" ng-model='newPost.content'></textarea>
-<br>
-<br>
-<button ng-click='post()'>Post</button>
+<div class='col-md-offset-2'>
+    <h1>{{message}}</h1>
+    <div class='newPost'>
+    <label for="title">TITLE</label>
+    <br>
+    <input id='title' type="text" ng-model='newPost.title'>
+    <br>
+    <br>
+    <label for="author">AUTHOR</label>
+    <br>
+    <input id='author' type="text" ng-model='newPost.author'>
+    <br>
+    <br>
+    <label for="content">CONTENT</label>
+    <br>
+</div>
+<div class='col-md-10'>
+    <textarea  cols="100" rows="10" id='content' type="text" ng-model='newPost.content'></textarea>
+    <br>
+    <br>
+    <button ng-click='post()'>Post</button>
+    </div>
 </div>

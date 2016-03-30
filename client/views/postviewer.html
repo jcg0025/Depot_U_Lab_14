@@ -1,12 +1,10 @@
-<h2>herro</h2>
 <div class='postView'>
-    {{post.data.title}}
+    <h1 class='col-md-offset-2'>{{post.data.title}}</h1>
     <br>
-    {{post.data.author}}
+    <h3 class='col-md-offset-2'>{{post.data.author}}</h3>
+    <h4 class='col-md-offset-2'>{{post.createdAt | date: 'medium'}}</h4>
     <br>
-    {{post.createdAt | date: 'medium'}}
+    <h4 class='col-md-9 col-md-offset-2'>{{post.data.content}}</h4>
     <br>
-    {{post.data.content}}
-    <br>
-    <a href="#edit/{{post.id}}">EDIT</a>    
+    <a class='col-md-offset-2' href="#edit/{{post.id}}">EDIT</a>    
 </div>

@@ -1,35 +1,12 @@
 .entryContainer{
     border: solid 2px black;
     margin-bottom: 10px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
-.entry {
-    margin-left: 10px;
-}
 
-.postView {
-    margin-left: 10px;
-}
 
-.newPost {
-    margin-left: 10px;
-}
 
-.edit {
-    margin-left: 10px;
-}
 
-#title{
-    width: 200px;
-}
 
-#author{
-    width: 200px;
-}
 
-#content {
-    width: 400px;
-    height: 200px;
-}
